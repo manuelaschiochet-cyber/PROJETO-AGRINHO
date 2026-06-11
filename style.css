@@ -1,1 +1,148 @@
+/* =========================
+   BASE DO SITE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background: #fdf6f0; /* pastel off-white */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   CABEÇALHO / MENU
+========================= */
+header {
+    background: #a8dadc; /* pastel azul */
+    color: #1d3557;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+/* botão menu mobile */
+.menu-toggle {
+    display: none;
+    background: #ffe5d9; /* pastel laranja */
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* menu padrão */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1d3557;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f4a261; /* pastel laranja */
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+.secao {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fdf6f0;
+}
+
+.secao h2 {
+    color: #457b9d; /* azul pastel */
+    margin-bottom: 15px;
+}
+
+.secao p,
+.secao li {
+    font-size: 16px;
+}
+
+/* listas */
+.secao ul {
+    list-style: square;
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* =========================
+   CARDS (ANIMAÇÃO SIMPLES)
+========================= */
+.card {
+    background: #fefae0; /* amarelo pastel */
+    padding: 20px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   BOTÃO
+========================= */
+button {
+    background: #a8dadc; /* azul pastel */
+    color: #1d3557;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #457b9d; /* azul pastel escuro */
+    color: #fdf6f0;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #a8dadc;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+}
